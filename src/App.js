@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Switch } from "react-router-dom";
@@ -11,7 +11,7 @@ import Modal from "./components/Modal";
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <Navbar />
         <Switch>
           <Route exact path="/" component={ProductList} />
@@ -20,7 +20,7 @@ class App extends Component {
           <Route component={Default} />
         </Switch>
         <Modal />
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
